@@ -17,7 +17,7 @@ def main():
 def get_config():
     global config
     if not config:
-        file = os.path.dirname(__file__) + '/tconf.json'
+        file = os.path.join(os.path.dirname(__file__), 'tconf.json')
         with open(file, 'r') as f:
             config = json.load(f)
             print(config)
